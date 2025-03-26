@@ -1,0 +1,9 @@
+Fila (Queue) = limite de elementos
+Fila Circular (Cycle Queue)
+File com dupla terminação (DEQueue)
+
+c = enfileirar
+r = frente
+u = atualizar
+d = desenfileirar
+    
