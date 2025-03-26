@@ -16,6 +16,7 @@ public class FilaEstaticaCircular implements Enfileiravel{
         dados = new Object[tamanho];
         ponteiroInicio = 0;
         ponteiroFim = -1;
+        quantidade = 0;
     }
 
     //métodos auxiliares
