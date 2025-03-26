@@ -1,7 +1,7 @@
 public class PilhaInvertidaPrincipal {
     public static void main (String args[]) {
         Empilhavel pilha = new PilhaInvertida(7); //mais indicado usar interface para preservar o código
-        // o objeto Empilhavel não pode chamar métodos da classe PilhaEstatica
+        // o objeto Empilhavel não pode chamar métodos da classe PilhaInvertida
 
         pilha.empilhar("Instituto");
 		pilha.empilhar("Federal");

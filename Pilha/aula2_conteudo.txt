@@ -1,0 +1,46 @@
+PILHA/STACK
+EMPILHAVEL/STACKABLE
+
+INTERFACE DEFINE COMPORTAMENTO
+CONJUNTO DE OPERAÇÕES QUE ALGO (CLASSE) DEVE PROVÊR
+
+----------------------------------------------------
+
+TIPO DE RETORNO
+NOME 
+PARÂMETROS DE ENTRADA
+
+-----------------------------------------------------
+
+AMBAS AS PILHAS SÃO LIFO (LAST IN FIRST OUT)
+
+-----------------------------------------------------
+
+/*CONJUNTO BÁSICO DE ESTRUTURA DE DADOS
+C- create (criar)
+R- read (ler)
+U- update (atualizar)
+D- delete (apagar)
+S- sort (ordenar)
+
+-----------------------------------------
+
+TIPOS DE DADOS
+- Numéricos
+    - inteiros
+        - unsigned int
+        - tinyint, smallint
+        - int
+        - long, longint, bigint
+    - ponto flutuante
+        - float
+        - double
+    - ponto fixo
+- String
+- Char
+- Lógico
+    - boolean, bool
+- Vetor, array, matriz unidimensional
+- Ponteiro
+- Objeto
+*/
