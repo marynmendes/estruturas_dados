@@ -5,7 +5,7 @@ public class FilaEstaticaCircular implements Enfileiravel{
     private Object[] dados;
     private int ponteiroInicio;
     private int ponteiroFim;
-    int quantidade;
+    private int quantidade;
     
     //construtores
     public FilaEstaticaCircular() {
@@ -48,7 +48,7 @@ public class FilaEstaticaCircular implements Enfileiravel{
     public void enfileirar(Object dado){
         if(!estaCheia()){
             ponteiroFim = (ponteiroFim + 1)%dados.length;
-            dado = dados[ponteiroFim];
+            dados[ponteiroFim] = dado;
             quantidade++;
         } else {
             System.err.println("Queue is full!");
@@ -100,4 +100,6 @@ public class FilaEstaticaCircular implements Enfileiravel{
 
         return aux;
     }
+
+    
 }
