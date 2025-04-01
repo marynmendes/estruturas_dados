@@ -1,0 +1,6 @@
+Toda pilha/fila é uma lista
+nem toda lista é pilha ou fila
+
+
+Atividade: fazer PilhaComFilas
+
