@@ -1,4 +1,4 @@
-package Fila;
+package PilhaFila;
 
 public class FilaEstaticaCircular implements Enfileiravel{
     //variáveis de intância
@@ -80,7 +80,7 @@ public class FilaEstaticaCircular implements Enfileiravel{
     @Override
     public void atualizarFim(Object dado){
         if(!estaVazia()){
-            dados[ponteiroFim] = dado;
+            dados[ponteiroInicio] = dado;
         } else {
             System.err.println("Queue is empty!");
         }
