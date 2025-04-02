@@ -80,7 +80,7 @@ public class FilaEstaticaCircular implements Enfileiravel{
     @Override
     public void atualizarFim(Object dado){
         if(!estaVazia()){
-            dados[ponteiroInicio] = dado;
+            dados[ponteiroFim] = dado;
         } else {
             System.err.println("Queue is empty!");
         }
