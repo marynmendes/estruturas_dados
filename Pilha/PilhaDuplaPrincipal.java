@@ -14,8 +14,8 @@ public class PilhaDuplaPrincipal {
 		pilha.empilhar2("Rio");
 		pilha.empilhar2("Grande");		
 		pilha.empilhar1("e");		
-		System.out.println("Espiar:" + pilha.espiar1());		
-		Object conteudo = pilha.desempilhar1();
+		System.out.println("Espiar:" + pilha.espiar1());	
+		Object conteudo;	
 		pilha.desempilhar1();
 		pilha.empilhar2("do");				
 		pilha.empilhar1("Tecnologia");
