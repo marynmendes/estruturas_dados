@@ -1,0 +1,7 @@
+algoritmos de ordenação por troca
+lista ordenadas 
+busca de dados
+
+bubble sort (monta do último pro primeiro)
+selection sort (monta do primeiro para o ultimo, trocando os indices apenas uma vez por 'for')
+insertion sort (usa pivô, assumindo que tudo a esquerda dele está ordenado)
