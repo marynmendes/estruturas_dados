@@ -174,6 +174,24 @@ public class ListaEstaticaCircular implements Listavel {
         return aux;
     }
 
+    public Object apagar2(int posicao){
+        Object aux = null;
+        if(!estaVazia() && (posicao >= 0 && posicao < quantidade)){
+            int posicaoFis = mapeamento(posicao);
+            aux = dados[posicaoFis];
+            int x = posicaoFis;
+            int y = retroceder(x);
+            for(int i = 0; i<quantidade-posicao+1; i++){
+                dados[x] = dados[y];
+                x = retroceder(x);
+                y = retroceder(y);
+            }
+            quantidade--;
+            ponteiroInicio = avancar(ponteiroInicio);
+        }
+        return aux;
+    }
+
     @Override 
     public void inserir (Object dado, int posicao){
         if(!estaCheia()){
