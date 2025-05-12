@@ -1,0 +1,19 @@
+USAR INTRODUÇÃO EM *TODOS* OS CÓDIGOS 
+A PARTIR DE AGORA
+
+DOCUMENTAÇÃO
+
+USAR PASTA SRC PARA CÓDIGOS-FONTE
+
+USAR PASTA BIN PARA CÓDIGO COMPILADO
+
+USAR PASTA DOC PARA DOCUMENTAÇÃO
+
+USAR PASTA TEST PARA TESTAR
+
+USAR PARA LIB PARA BIBLIOTECAS 
+-----------------------------------------
+PILHA DINÂMICA
+
+ligada ou encadeada - uma referência 
+duplamente ligada - duas referências
