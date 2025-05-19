@@ -1,3 +1,4 @@
+package Pilha;
 /**
  * Esta classe representa um nó de uma lista duplamente encadeada.
  * 
@@ -14,7 +15,14 @@ public class NodoDuplo<T>{
     private NodoDuplo<T> anterior;
     private T dado;
     private NodoDuplo<T> proximo;
-    
+
+    public NodoDuplo() {
+    }
+
+    public NodoDuplo(T dado) {
+        this.dado = dado;
+    }
+
     public NodoDuplo<T> getAnterior() {
         return anterior;
     }

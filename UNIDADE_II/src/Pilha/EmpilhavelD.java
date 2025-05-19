@@ -1,3 +1,4 @@
+package Pilha;
 /**
  * Esta interface indica as operações que uma classe 
  * que deseja ter o comportamento de ser Empilhavel precisa.
