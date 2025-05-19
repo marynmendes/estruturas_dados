@@ -1,5 +1,9 @@
 import java.util.NoSuchElementException;
 import org.junit.Test;
+
+import Pilha.EmpilhavelD;
+import Pilha.PilhaDinamicaGenerica;
+
 import static org.junit.Assert.*;
 
 public class PilhaDinamicaGenericaTest {
