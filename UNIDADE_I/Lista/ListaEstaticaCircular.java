@@ -1,6 +1,6 @@
 package Lista;
 
-public class ListaEstaticaCircular implements Listavel {
+public class ListaEstaticaCircular implements ListavelD {
     //variáveis de intância
     private Object[] dados;
     private int ponteiroInicio;

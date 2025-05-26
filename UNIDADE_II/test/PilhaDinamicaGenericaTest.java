@@ -1,10 +1,10 @@
 import java.util.NoSuchElementException;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 import Pilha.EmpilhavelD;
 import Pilha.PilhaDinamicaGenerica;
 
-import static org.junit.Assert.*;
 
 public class PilhaDinamicaGenericaTest {
 
@@ -63,7 +63,7 @@ public class PilhaDinamicaGenericaTest {
 		//Se chegou aqui, a exceção não foi lançada!
         fail("Deveria ter acontecido um overflow!");
     } catch (NoSuchElementException e) {
-        assertEquals("Pilha Cheia!", e.getMessage());
+        assertEquals("Pilha cheia!", e.getMessage());
 	}
   }
   
@@ -77,7 +77,7 @@ public class PilhaDinamicaGenericaTest {
 		//Se chegou aqui, a exceção não foi lançada!
         fail("Deveria ter acontecido um underflow!");
     } catch (NoSuchElementException e) {
-        assertEquals("Pilha Vazia!", e.getMessage());
+        assertEquals("Pilha vazia!", e.getMessage());
 	}
   } 
 
@@ -91,7 +91,7 @@ public class PilhaDinamicaGenericaTest {
 		//Se chegou aqui, a exceção não foi lançada!
         fail("Deveria ter acontecido um underflow!");
     } catch (NoSuchElementException e) {
-        assertEquals("Pilha Vazia!", e.getMessage());
+        assertEquals("Pilha vazia!", e.getMessage());
 	}
   }
 
@@ -105,7 +105,7 @@ public class PilhaDinamicaGenericaTest {
 		//Se chegou aqui, a exceção não foi lançada!
         fail("Deveria ter acontecido um underflow!");
     } catch (NoSuchElementException e) {
-        assertEquals("Pilha Vazia!", e.getMessage());
+        assertEquals("Pilha vazia!", e.getMessage());
 	}
   }
 }

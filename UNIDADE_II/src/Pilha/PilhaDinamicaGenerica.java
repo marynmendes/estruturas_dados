@@ -83,7 +83,7 @@ public class PilhaDinamicaGenerica<T> implements EmpilhavelD<T>{
     @Override
     public T espiar(){
         if(estaVazia()){
-            throw new NoSuchElementException("A Pilha está vazia!");
+            throw new NoSuchElementException("Pilha vazia!");
         }
         return ponteiroTopo.getDado();
     }
@@ -99,7 +99,7 @@ public class PilhaDinamicaGenerica<T> implements EmpilhavelD<T>{
     @Override
     public void atualizar(T novoDado){
         if(estaVazia()){
-            throw new NoSuchElementException("A Pilha está vazia!");
+            throw new NoSuchElementException("Pilha vazia!");
         } 
         ponteiroTopo.setDado(novoDado);
     }
@@ -112,16 +112,19 @@ public class PilhaDinamicaGenerica<T> implements EmpilhavelD<T>{
      * esteja vazia.
      */
     @Override
-    public T desempilhar(){
-        if(estaVazia()){
-            throw new NoSuchElementException("A Pilha está vazia!");
-        }
-        T aux = ponteiroTopo.getDado();
-        quantidade--;
-        ponteiroTopo = ponteiroTopo.getAnterior();
-        ponteiroTopo.setProximo(null);
-        return aux;
-    }
+    public T desempilhar() {
+		if (estaVazia()) {
+			throw new NoSuchElementException("Pilha vazia!");
+		}
+		T dadoTopo = ponteiroTopo.getDado();
+		ponteiroTopo = ponteiroTopo.getAnterior();
+		quantidade--;
+		if (!estaVazia()) {
+			ponteiroTopo.setProximo(null);
+		}
+		return dadoTopo;
+	}
+
 
     /**
      * Adiciona um elemento ao topo da Pilha.
@@ -132,7 +135,7 @@ public class PilhaDinamicaGenerica<T> implements EmpilhavelD<T>{
     @Override
     public void empilhar(T dado){
         if(estaCheia()){
-            throw new NoSuchElementException("A Pilha está cheia!");
+            throw new NoSuchElementException("Pilha cheia!");
         }
         NodoDuplo<T> novoNodo = new NodoDuplo<>();
         novoNodo.setDado(dado);
