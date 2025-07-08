@@ -13,8 +13,8 @@ package Fila;
 import java.util.NoSuchElementException;
 
 public class FilaDinamicaGenerica<T> implements EnfileiravelD<T> {
-    private NodoDuplo<T> ponteiroInicio;
-    private NodoDuplo<T> ponteiroFim;
+    private NodoDuplo<T> ponteiroInicio = new NodoDuplo<>();
+    private NodoDuplo<T> ponteiroFim = new NodoDuplo<>();
     private int quantidade;
     private int tamanho;
 
@@ -23,8 +23,6 @@ public class FilaDinamicaGenerica<T> implements EnfileiravelD<T> {
     }
 
     public FilaDinamicaGenerica(int tamanho) {
-        ponteiroFim = null;
-        ponteiroInicio = null;
         quantidade = 0;
         this.tamanho = tamanho;
     }
@@ -40,13 +38,17 @@ public class FilaDinamicaGenerica<T> implements EnfileiravelD<T> {
             throw new NoSuchElementException("Fila está cheia!");
         } else {
             NodoDuplo<T> novoNodo = new NodoDuplo<>(dado);
-            novoNodo.setAnterior(ponteiroFim);
-            if(!estaVazia()){
+            if(!estaVazia()) {
                 ponteiroFim.setProximo(novoNodo);
-            } else {
+                novoNodo.setAnterior(ponteiroFim);
                 ponteiroFim = novoNodo;
-            quantidade++;
+            } else {
+                ponteiroFim.setProximo(novoNodo);
+                novoNodo.setAnterior(ponteiroFim);
+                ponteiroFim = novoNodo;
+                ponteiroInicio = ponteiroFim;
             }
+            quantidade++;
             
         }
     }
@@ -85,13 +87,13 @@ public class FilaDinamicaGenerica<T> implements EnfileiravelD<T> {
         T auxiliar = null;
         if(estaVazia()){
             throw new NoSuchElementException("Fila está vazia");
-        } else {
-            auxiliar = ponteiroInicio.getDado();
-            ponteiroInicio = ponteiroInicio.getProximo();
-            ponteiroInicio.setAnterior(null);
-            quantidade--;
-
         }
+        auxiliar = ponteiroInicio.getDado();
+        ponteiroInicio = ponteiroInicio.getProximo();
+        if(quantidade!=1) {
+            ponteiroInicio.setAnterior(null);
+        }
+        quantidade--;
         return auxiliar;
     }
 

@@ -81,7 +81,7 @@ public class ListaDinamicaGenerica<T> implements ListavelD<T>{
         if(estaVazia()){
             throw new UnderflowException("Está vazia!");
         }
-        if (!(posicao >= 0 && posicao <= quantidade)){
+        if (!(posicao >= 0 && posicao < quantidade)){
             throw new IndexOutOfBoundsException("Indice Invalido!");
         }
         NodoDuplo<T> ponteiroAuxiliar = ponteiroInicio;
