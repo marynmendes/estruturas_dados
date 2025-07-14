@@ -3,10 +3,23 @@ public class NoTriplo<T> {
     private NoTriplo<T> pai;
     private NoTriplo<T> direita;
     private NoTriplo<T> esquerda;
+    private int altura;
 
     public NoTriplo(T dado) {
         this.dado = dado;
     }
+    
+	public NoTriplo() {
+		altura = 0;
+	}
+	
+	public int getAltura() {
+		return altura;
+	}
+
+	public void setAltura(int altura) {
+		this.altura = altura;
+	}
     
     public T getDado() {
         return dado;
