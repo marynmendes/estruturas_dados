@@ -1,0 +1,35 @@
+Árvore B
+- múltiplos filhos
+- armazenamento em blocos
+- inserção ordenada
+- deleção utilizando redistribuição¹ ou concatenação² 
+        (caso a deleção quebre a regra de tamanho mínimo da página = ordem/2)
+
+                    25
+        7|16                 36|45|54
+   1|4 10|13 19|22    28|33 39|42 48|51 57|60 
+
+   inserção 37
+
+                    25
+        7|16                 36|45|54
+   1|4 10|13 19|22    28|33 37|39|42 48|51 57|60 
+
+   deleção 48
+
+                    25
+        7|16                 36|42|54
+   1|4 10|13 19|22   28|33 37|39| 45|51 57|60
+
+   deleção 45
+
+                    25
+        7|16                 36|54
+   1|4 10|13 19|22   28|33 37|39|42|51 57|60
+
+
+Árvore B+
+A diferença entre B e B+ é que na árvore B+, ao ocorrer o split, o valor que sobe na vdd é uma referência ao dado
+e não o dado real. Os dados reais de toda a árvore ficam nas folhas.
+Ou seja, quando o split ocorre nas folhas, o dado fica em uma folha e sua referência sobe, já quando ocorre split
+nas partes internas da árvore, o split ocorre de forma semelhante ao da árvore B
